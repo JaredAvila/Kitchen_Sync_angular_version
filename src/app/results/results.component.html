@@ -1,7 +1,33 @@
-<h1>here's the carousel</h1>
-<a routerLink="/">Back</a>
-<div class="container">
+<div class="container-fluid">
   <div class="row">
-    <div class="col"><app-carousel></app-carousel></div>
+    <div class="col-12">
+      <div class="searchTop">
+        <h1 class="results">Search Results</h1>
+        <a routerLink="/" class="btn btn-outline-danger">Back</a>
+      </div>
+    </div>
   </div>
+  <div class="row">
+    <div class="col-12">
+      <carousel>
+        <ul>
+          <li *ngFor="let recipe of recipes" style="display: block">
+            <a href="{{ recipe.recipe.url }}" target="_blank">
+              <slide>
+                <h4 style="color: white; text-align: center;">
+                  {{ recipe.recipe.label }}
+                </h4>
+                <img
+                  src="{{ recipe.recipe.image }}"
+                  alt="first slide"
+                  style="display: block; height: 500px; margin: auto"
+                />
+              </slide>
+            </a>
+          </li>
+        </ul>
+      </carousel>
+    </div>
+  </div>
+  <div class="row"><div class="col-12"></div></div>
 </div>

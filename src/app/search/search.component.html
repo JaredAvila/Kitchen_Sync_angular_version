@@ -1,2 +1,37 @@
-<p>search works!</p>
-<a routerLink="/results">Results</a>
+<div class="container-fluid">
+  <div class="container">
+    <h1 class="title">The Kitchen Sync</h1>
+    <form class="forms">
+      <div class="inputs">
+        <input
+          type="text"
+          [(ngModel)]="first"
+          name="first"
+          placeholder="First Ingredient"
+        />
+        <input
+          type="text"
+          [(ngModel)]="second"
+          name="second"
+          placeholder="Second Ingredient"
+        />
+        <input
+          type="text"
+          [(ngModel)]="third"
+          name="third"
+          placeholder="Third Ingredient"
+        />
+      </div>
+
+      <button type="button" class="btn btn-warning">
+        <a
+          routerLink="/results/{{
+            this.first + '+' + this.second + '+' + this.third
+          }}"
+        >
+          Search
+        </a>
+      </button>
+    </form>
+  </div>
+</div>

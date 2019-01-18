@@ -1,7 +1,74 @@
-/* You can add global styles to this file, and also import other style files */
-// font-family: 'Libre Barcode 128 Text', cursive;
-// font-family: 'Arimo', sans-serif;
-@import "~bootstrap/dist/css/bootstrap.css";
-h1 {
-  color: primary;
+body {
+  font-family: "Arimo", sans-serif;
+  background-color: black;
+}
+
+.container-fluid {
+  background: url("./assets/img/recipe_search.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+.title {
+  font-family: "Libre Barcode 128 Text", cursive;
+  font-size: 9rem;
+  margin: auto;
+  width: fit-content;
+}
+
+.results {
+  font-size: 3.5rem;
+  color: rgb(214, 211, 211);
+  letter-spacing: 5px;
+  text-shadow: 0 0 7px black;
+}
+
+form.forms {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  width: fit-content;
+  margin: auto;
+
+  .inputs {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+  }
+
+  input {
+    padding: 10px;
+    font-size: 1.3rem;
+    border-radius: 8px;
+    margin-right: 10px;
+    border: none;
+    outline: none;
+  }
+  button {
+    width: fit-content;
+    margin: auto;
+
+    a {
+      color: inherit;
+    }
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .title {
+    font-size: 3.5rem;
+  }
+
+  form.forms {
+    .inputs {
+      flex-direction: column;
+
+      input {
+        margin-top: 10px;
+        margin-right: 0;
+      }
+    }
+  }
 }

@@ -1,0 +1,23 @@
+.container-fluid {
+  background: black !important;
+  padding: 0;
+  height: 100%;
+
+  .searchTop {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-image: linear-gradient(to right, black, rgb(46, 46, 46));
+    margin-bottom: 10px;
+
+    a,
+    h1 {
+      width: fit-content;
+      margin: auto;
+      margin-bottom: 10px;
+    }
+  }
+  ul li {
+    display: block;
+  }
+}
